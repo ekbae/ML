@@ -37,7 +37,7 @@ with tf.Session() as sess:
     for i in range(num_episodes):
         # Reset environment and get first new observation
         s = env.reset()
-        e = 1. / ((i / 50) + 10)
+        e = 1. / ((i / 100) + 1)
         rAll =0
         done = False
 
