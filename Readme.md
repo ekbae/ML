@@ -1,12 +1,10 @@
 Reinforcement Learning
-Deep Q-Learning 공부자료 git 업로드용
+Deep Q-Learning
 
-1. FrozenLake에서 Q-Learning
+1. Q-Table in FrozenLake
 
-2.
+2. Q-Learning in FrozenLake
 
-3.
+3. Deep Q-Learning in FrozenLake
 
-4.
-
-5.
+4. Useful code
