@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 class DQN:
-    def __init__(self, session, input_size, output_size, name="main"):
+    def __init__(self, session, input_size, output_size, name):
         self.session = session
         self.input_size = input_size
         self.output_size = output_size
@@ -15,13 +15,13 @@ class DQN:
             self._X = tf.placeholder(
                 tf.float32, [None, self.input_size], name= "input_x")
 
-            #First layer of weights
+            # First layer of weights
             W1= tf.get_variable("W1", shape=[self.input_size, h_size],
                                 initializer = tf.contrib.layers.xavier_initializer())
 
             layer1 =tf.nn.tanh(tf.matmul(self._X, W1))
 
-            #second layer of weights
+            # Second layer of weights
             W2= tf.get_variable("W2", shape = [h_size, self.output_size],
                                 initializer=tf.contrib.layers.xavier_initializer())
 
@@ -43,5 +43,4 @@ class DQN:
         return self.session.run(self._Qpred, feed_dict={self._X:x})
 
     def update(self, x_stack, y_stack):
-        return self.session.run([self._loss, self._train],feed_dict={
-        self._X: x_stack, self._Y:y_stack })
+        return self.session.run([self._loss, self._train],feed_dict={self._X: x_stack, self._Y: y_stack})
