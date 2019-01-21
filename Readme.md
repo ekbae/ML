@@ -1,5 +1,8 @@
 Reinforcement Learning
+=====
+
 Deep Q-Learning
+-----
 
 1. Q-Table in FrozenLake
 
