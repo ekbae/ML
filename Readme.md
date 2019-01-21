@@ -12,5 +12,7 @@ Reinforcement Learning (DQN)
 - Windows 10
 - python 3.6, tensorflow 1.12
 <pre><code>
- > pip install gym
+ > pip3 install --upgrade tensorflow
+ > pip3 install matplotlib
+ > pip3 install gym
  </code></pre>
